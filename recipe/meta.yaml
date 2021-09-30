@@ -25,6 +25,7 @@ requirements:
     - ipywidgets >=7.6.0
     - numpy
     - python >=3.6
+    - pillow
 
 test:
   imports:
