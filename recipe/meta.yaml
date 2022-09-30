@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - ipywidgets >=7.6.0
+    - ipywidgets >=7.6.0,<8.0.0
     - numpy
     - python >=3.6
     - pillow
