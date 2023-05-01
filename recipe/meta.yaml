@@ -20,11 +20,11 @@ requirements:
   host:
     - jupyter-packaging >=0.7.9,<0.8
     - pip
-    - python >=3.6
+    - python >=3.9
   run:
     - ipywidgets >=7.6.0,<8.0.0
     - numpy
-    - python >=3.6
+    - python >=3.9
     - pillow
 
 test:
