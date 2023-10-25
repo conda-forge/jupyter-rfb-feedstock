@@ -11,7 +11,7 @@ source:
   sha256: 48de3fc13c7a012f586b6713fdef61858e925291775f2b287eb017e00e7fc17d
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - pip
     - python >=3.6
   run:
-    - ipywidgets >=7.6.0,<8.0.0
+    - ipywidgets >=7.6.0
     - numpy
     - python >=3.6
     - pillow
