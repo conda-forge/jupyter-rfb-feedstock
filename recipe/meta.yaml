@@ -33,11 +33,13 @@ test:
   requires:
     - pip
     - jupyterlab
+    - pytest
   commands:
     - pip check
     - jupyter labextension list
     - jupyter labextension list 1>labextensions 2>&1
     - cat labextensions | grep "jupyter_rfb.*OK.*jupyter_rfb"  # [unix]
+    - pytest .
 
 about:
   home: https://github.com/vispy/jupyter_rfb
