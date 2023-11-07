@@ -1,11 +1,11 @@
-About jupyter-rfb
-=================
+About jupyter-rfb-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-rfb-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/vispy/jupyter_rfb
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyter-rfb-feedstock/blob/main/LICENSE.txt)
 
 Summary: Remote Frame Buffer for Jupyter
 
@@ -145,4 +145,5 @@ Feedstock Maintainers
 
 * [@almarklein](https://github.com/almarklein/)
 * [@djhoese](https://github.com/djhoese/)
+* [@kushalkolar](https://github.com/kushalkolar/)
 
