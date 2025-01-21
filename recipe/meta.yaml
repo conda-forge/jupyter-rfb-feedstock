@@ -1,5 +1,5 @@
 {% set name = "jupyter-rfb" %}
-{% set version = "0.4.4" %}
+{% set version = "0.5.1" %}
 
 
 package:
@@ -8,24 +8,26 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyter_rfb-{{ version }}.tar.gz
-  sha256: 40e9af8e29adb90b5f58c0b9cb646abc2a142e0ac5f00822ba65291d958945e7
+  sha256: f0e6908420048490f95168cb20ccd658022b3f1601fd6932d610a95da31fa007
 
 build:
-  number: 1
+  number: 0
   noarch: python
 
 requirements:
-  run_constrained:
-    - jupyterlab >=3.0
+
   host:
-    - jupyter-packaging >=0.7.9,<0.8
+    - hatch-jupyter-builder
     - pip
     - python {{ python_min }}
   run:
     - ipywidgets >=7.6.0,<9.0.0
+    - jupyterlab-widgets
     - numpy
     - python >={{ python_min }}
     - pillow
+  run_constrained:
+    - jupyterlab >=3.0
 
 test:
   imports:
