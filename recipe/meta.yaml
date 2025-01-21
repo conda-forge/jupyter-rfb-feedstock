@@ -23,7 +23,6 @@ requirements:
     - python {{ python_min }}
   run:
     - ipywidgets >=7.6.0,<9.0.0
-    - jupyterlab-widgets
     - numpy
     - python >={{ python_min }}
     - pillow
