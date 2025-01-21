@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyter_rfb-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyter_rfb-{{ version }}.tar.gz
   sha256: 40e9af8e29adb90b5f58c0b9cb646abc2a142e0ac5f00822ba65291d958945e7
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -20,11 +20,11 @@ requirements:
   host:
     - jupyter-packaging >=0.7.9,<0.8
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - ipywidgets >=7.6.0,<9.0.0
     - numpy
-    - python >=3.9
+    - python >={{ python_min }}
     - pillow
 
 test:
@@ -33,6 +33,7 @@ test:
   requires:
     - pip
     - jupyterlab
+    - python {{ python_min }}
   commands:
     - pip check
     - jupyter labextension list
