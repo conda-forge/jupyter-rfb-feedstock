@@ -19,6 +19,7 @@ requirements:
   host:
     - hatchling
     - hatch-jupyter-builder
+    - jupyterlab
     - yarn >=1.22,<2
     - pip
     - python {{ python_min }}
