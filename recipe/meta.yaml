@@ -1,5 +1,5 @@
 {% set name = "jupyter-rfb" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyter_rfb-{{ version }}.tar.gz
-  sha256: 88097deee2cc1a8c5d65a6c24d19062f89ce1837c99153da51478808257546eb
+  sha256: 45549b1b36614195f76d33a1c299b21628d5aa4b3b4ed9a4b49b4888c98b2191
 
 build:
   number: 0
