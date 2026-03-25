@@ -1,5 +1,5 @@
 {% set name = "jupyter-rfb" %}
-{% set version = "0.5.4" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyter_rfb-{{ version }}.tar.gz
-  sha256: 7363c9aab583aca87950dab5ae72472d73efbb71c829a4fbacd6dd22a979b454
+  sha256: b77a9a464e2da6d0b345b3989f037c4db2fc0c34da3379b380c42baeb0b3abca
 
 build:
   number: 0
@@ -17,36 +17,28 @@ build:
 requirements:
 
   host:
-    - hatchling
-    - hatch-jupyter-builder
-    - jupyterlab
-    - yarn >=1.22,<2
+    - flit
     - pip
     - python {{ python_min }}
   run:
-    - ipywidgets >=7.6.0,<9.0.0
     - numpy
+    - anywidget
     - python >={{ python_min }}
-    - pillow
-  run_constrained:
-    - jupyterlab >=3.0
+    - simplejpeg
 
 test:
   imports:
     - jupyter_rfb
   requires:
     - pip
-    - jupyterlab
+    - anywidget
     - python {{ python_min }}
   commands:
     - pip check
-    - jupyter labextension list
-    - jupyter labextension list 1>labextensions 2>&1
-    - cat labextensions | grep "jupyter_rfb.*OK.*jupyter_rfb"  # [unix]
 
 about:
   home: https://github.com/vispy/jupyter_rfb
-  summary: Remote Frame Buffer for Jupyter
+  summary: Remote Frame Buffer for Python notebooks
   license: MIT
   license_file: LICENSE
 
