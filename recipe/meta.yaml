@@ -17,36 +17,28 @@ build:
 requirements:
 
   host:
-    - hatchling
-    - hatch-jupyter-builder
-    - jupyterlab
-    - yarn >=1.22,<2
+    - flit
     - pip
     - python {{ python_min }}
   run:
-    - ipywidgets >=7.6.0,<9.0.0
     - numpy
+    - anywidget
     - python >={{ python_min }}
-    - pillow
-  run_constrained:
-    - jupyterlab >=3.0
+    - simplejpeg
 
 test:
   imports:
     - jupyter_rfb
   requires:
     - pip
-    - jupyterlab
+    - anywidget
     - python {{ python_min }}
   commands:
     - pip check
-    - jupyter labextension list
-    - jupyter labextension list 1>labextensions 2>&1
-    - cat labextensions | grep "jupyter_rfb.*OK.*jupyter_rfb"  # [unix]
 
 about:
   home: https://github.com/vispy/jupyter_rfb
-  summary: Remote Frame Buffer for Jupyter
+  summary: Remote Frame Buffer for Python notebooks
   license: MIT
   license_file: LICENSE
 
